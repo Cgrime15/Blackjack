@@ -15,7 +15,7 @@ public enum CardValue {
     JACK,
     QUEEN,
     KING;
-
+    //change
     public int getCardBlackjackValue() {
         return CardValue.getCardBlackjackValue(this);
     }
