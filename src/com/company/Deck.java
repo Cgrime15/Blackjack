@@ -10,7 +10,12 @@ public class Deck {
     public Deck() {
         for (int suit = 0; suit < 4; suit++) {
             for (int type = 1; type < 14; type++) {
-                Card card = new Card(type);
+                Card card;
+                try {
+                    card = new Card(type);
+                } catch (IllegalArgumentException e) {
+                    card = new Card(1);
+                }
                 deck.add(card);
                 // System.out.println(card.getValue());
             }
